@@ -52,3 +52,47 @@ section {
   text-decoration: none;
   margin-top: 0.5rem;
 }
+/* Case Study Styling */
+.case-study {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.case-study-block {
+  margin-bottom: 2rem;
+}
+
+.sql-snippet {
+  background: #f8f9fa;
+  border-left: 4px solid #2d5be3;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.sql-snippet pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.dashboard-img {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+
