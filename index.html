@@ -44,9 +44,8 @@
     style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px;"
   >
   <div class="project-buttons">
-    <a href="#" class="btn">View Project</a>
-    <a href="#covid-case-study" class="btn">View Case Study</a>
-       <a href="https://public.tableau.com/your-dashboard" class="btn">Live Dashboard</a>
+    <a href="https://github.com/DimaNaeem/Covid19-SQL-PowerBi/edit/main/README.md" class="btn">View Case Study</a>
+    <a href="https://public.tableau.com/your-dashboard" class="btn">Live Dashboard</a>
     <a href="https://github.com/DimaNaeem/Covid19-SQL-PowerBi" class="btn" target="_blank">SQL Code</a>
   </div>
 </div>
@@ -62,75 +61,7 @@
   <h2>COVID-19 Data Exploration: Key Insights</h2>
   
   <!-- Problem Statement -->
-  <section id="covid-case-study">
-  <h2>COVID-19 Analysis: Case Study</h2>
-  <h3>SQL Insights</h3>
-  <ul>
-    <li>Global death rate: 2.1%</li>
-    <li>Highest infection rate: [Country] at X%</li>
-  </ul>
-  <h3>Power BI Visuals</h3>
-  <img src="C:\Users\Naeem\OneDrive\Desktop\covid19-sql-powerbi-dashboard\images\Dashboard.png" alt="Power BI Dashboard">
-</section>       
-  <div class="case-study-block">
-    <h3>🔍 Problem</h3>
-    <p>Uncover patterns in COVID-19 deaths, infections, and vaccinations to identify high-risk regions and vaccination efficacy.</p>
-  </div>
-
-  <!-- Tools Used -->
-  <div class="case-study-block">
-    <h3>🛠️ Tools</h3>
-    <ul>
-      <li><strong>SQL</strong>: Complex queries (CTEs, joins, window functions)</li>
-      <li><strong>Tableau</strong>: Interactive dashboards</li>
-      <li><strong>Python</strong> (optional): Data cleaning/pre-processing</li>
-    </ul>
-  </div>
-
-  <!-- Key SQL Highlights -->
-  <div class="case-study-block">
-    <h3>📊 Key Analyses</h3>
-    <div class="sql-snippet">
-      <h4>1. Death Rate Analysis</h4>
-      <pre><code>SELECT Location, date, 
-       total_cases, total_deaths, 
-       (total_deaths/total_cases)*100 AS DeathPercentage
-              FROM CovidDeaths
-              WHERE continent IS NOT NULL
-              ORDER BY 1,2;</code></pre>
-      <p><strong>Insight</strong>: Identified countries with the highest mortality rates.</p>
-    </div>
-
-    <div class="sql-snippet">
-      <h4>2. Vaccination Progress (Rolling Totals)</h4>
-      <pre><code>WITH PopvsVac AS (
-  SELECT dea.continent, dea.location, dea.date, 
-         dea.population, vac.new_vaccinations,
-         SUM(CONVERT(int,vac.new_vaccinations)) OVER (
-           PARTITION BY dea.location 
-           ORDER BY dea.location, dea.date
-         ) AS RollingPeopleVaccinated
-  FROM CovidDeaths dea
-  JOIN CovidVaccinations vac
-    ON dea.location = vac.location
-    AND dea.date = vac.date
-  WHERE dea.continent IS NOT NULL
-)
-SELECT *, (RollingPeopleVaccinated/population)*100 AS PercentVaccinated
-FROM PopvsVac;</code></pre>
-      <p><strong>Insight</strong>: Tracked vaccination rollout efficiency across continents.</p>
-    </div>
-  </div>
-
-  <!-- Visualization Preview -->
-  <div class="case-study-block">
-    <h3>📈 Tableau Dashboard</h3>
-    <img src="assets/covid-dashboard-screenshot.png" alt="COVID-19 Dashboard" class="dashboard-img">
-    <p><a href="https://public.tableau.com/your-dashboard" class="btn">Explore Live Dashboard</a></p>
-  </div>
-</section>   
-
-
+ 
   
   <!-- Contact -->
   <section id="contact">
