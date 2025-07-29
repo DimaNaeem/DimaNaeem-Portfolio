@@ -85,7 +85,11 @@ section {
   border: 1px solid #eee;
   border-radius: 4px;
 }
-
+.project img {
+  max-height: 200px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image fits nicely */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 .project-links {
   display: flex;
   gap: 0.5rem;
