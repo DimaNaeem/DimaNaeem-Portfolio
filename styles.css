@@ -96,6 +96,13 @@ section {
   flex-wrap: wrap;
 }
 
+#covid-case-study ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+#covid-case-study li {
+  margin-bottom: 8px;
+}
 
 
 
