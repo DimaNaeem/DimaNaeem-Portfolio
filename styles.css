@@ -17,8 +17,9 @@ header {
 }
 
 .subtitle {
-  font-weight: 300;
-  opacity: 0.9;
+  margin: 0 0 20px 0;
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
 /* Sections */
@@ -169,21 +170,24 @@ section {
 /* Header container */
 .header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 40px 20px;
+   flex-direction: row-reverse; 
 }
 
 /* Profile picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   margin-left: 40px;
 }
 
 /* Header info (right side) */
