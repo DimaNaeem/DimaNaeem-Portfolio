@@ -123,7 +123,20 @@ section h2 {
  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+.tech-stack {
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+}
 
+.tech-stack img {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.tech-stack img:hover {
+  opacity: 1;
+}
 
 
 
@@ -181,6 +194,17 @@ section h2 {
 .project-buttons a:hover {
   background: #374151;
 }
+
+.btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+
 
 /* ROADMAP SECTION */
 #roadmap ul {
