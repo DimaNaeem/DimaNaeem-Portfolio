@@ -35,13 +35,13 @@
   <h2>About Me</h2>
  <div class="about-container">
     <div class="about-preview">
-  
-  <p>
-   I have a passion for solving business problems through data-driven and secure digital solutions... </p>
-<div class="read-more">Hover to read more <i class="fas fa-chevron-down"></i></div>
+  <p> I have a passion for solving business problems through data-driven and secure digital solutions... </p>
+
+ <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
     </div>
-    <div class="about-full">    
-           <p>From uncovering deep insights in datasets to building dynamic web applications in PHP and full-stack identity management systems, I bridge the gap between raw data and real-world impact. With a strong foundation in cybersecurity, I design systems and solutions that are not only efficient and insightful but also secure and scalable.</p>
+    <div class="about-full">
+        
+     <p>From uncovering deep insights in datasets to building dynamic web applications in PHP and full-stack identity management systems, I bridge the gap between raw data and real-world impact. With a strong foundation in cybersecurity, I design systems and solutions that are not only efficient and insightful but also secure and scalable.</p>
 
 
     </div>
@@ -146,6 +146,31 @@
   </ul>
 </section>
 
+<!-- Add before Contact section -->
+<section id="hobbies">
+  <h2>Beyond Code</h2>
+  <div class="hobbies-container">
+    <div class="hobby">
+      <i class="fas fa-utensils"></i>
+      <h3>Cooking & Baking</h3>
+    </div>
+    <div class="hobby">
+      <i class="fas fa-pen-fancy"></i>
+      <h3>Calligraphy</h3>
+    </div>
+    <div class="hobby">
+      <i class="fas fa-plane"></i>
+      <h3>Travel</h3>
+    </div>
+  </div>
+  <p class="hobbies-text">
+    When I'm not analyzing data or building secure systems, you'll find me experimenting with recipes, 
+    practicing calligraphy, or planning my next travel adventure.
+  </p>
+</section>
+
+
+                            
   
 <!-- Contact -->
 <section id="contact">
@@ -154,7 +179,7 @@
     <div class="contact-method">
       <i class="fas fa-envelope"></i>
       <h3>Email</h3>
-      <a href="mailto:naeem.dima30@gmail.com">naeem.dima30@gmail.com</a>
+      <a href="mailto:naeem.dima30@gmail.com"></a>
     </div>
     <div class="contact-method">
       <i class="fab fa-linkedin"></i>
@@ -169,5 +194,12 @@
   </div>
 </section>
 
+<script>
+  document.querySelector('.read-more-btn').addEventListener('click', function() {
+    document.querySelector('.about-container').classList.toggle('expanded');
+  });
+</script>
+
+                            
 </body>
 </html>
