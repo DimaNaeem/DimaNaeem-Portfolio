@@ -33,19 +33,11 @@
 <!-- About -->
 <section id="about">
   <h2>About Me</h2>
- <div class="about-container">
-    <div class="about-preview">
-  <p> I have a passion for solving business problems through data-driven and secure digital solutions... </p>
-
- <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+  <div class="about-container">
+    <div class="about-overlay">
+      <p class="about-hidden">From uncovering deep insights in datasets to building secure full-stack systems, I combine data and cybersecurity expertise to deliver impactful, scalable solutions.</p>
     </div>
-    <div class="about-full">
-        
-     <p>From uncovering deep insights in datasets to building dynamic web applications in PHP and full-stack identity management systems, I bridge the gap between raw data and real-world impact. With a strong foundation in cybersecurity, I design systems and solutions that are not only efficient and insightful but also secure and scalable.</p>
-
-
-    </div>
- </div>
+  </div>
 </section>
 
 <!-- Projects -->
@@ -147,9 +139,10 @@
 </section>
 
 <!-- Add before Contact section -->
-<section id="hobbies">
-  <h2>Beyond Code</h2>
-  <div class="hobbies-container">
+
+ <section id="hobbies">
+  <h2 class="toggle-trigger">Beyond Code <i class="fas fa-chevron-down"></i></h2>
+  <div class="hobbies-container hidden">
     <div class="hobby">
       <i class="fas fa-utensils"></i>
       <h3>Cooking & Baking</h3>
@@ -162,11 +155,11 @@
       <i class="fas fa-plane"></i>
       <h3>Travel</h3>
     </div>
+    <p class="hobbies-text">
+      When I'm not analyzing data or building secure systems, you'll find me experimenting with recipes,
+      practicing calligraphy, or planning my next travel adventure.
+    </p>
   </div>
-  <p class="hobbies-text">
-    When I'm not analyzing data or building secure systems, you'll find me experimenting with recipes, 
-    practicing calligraphy, or planning my next travel adventure.
-  </p>
 </section>
 
 
@@ -195,9 +188,23 @@
 </section>
 
 <script>
-  document.querySelector('.read-more-btn').addEventListener('click', function() {
-    document.querySelector('.about-container').classList.toggle('expanded');
-  });
+// Reveal about section on hover
+const aboutContainer = document.querySelector('.about-container');
+aboutContainer.addEventListener('mouseenter', () => {
+  aboutContainer.classList.add('show-about');
+});
+aboutContainer.addEventListener('mouseleave', () => {
+  aboutContainer.classList.remove('show-about');
+});
+
+// Toggle hobbies on click
+const trigger = document.querySelector('.toggle-trigger');
+const hobbies = document.querySelector('.hobbies-container');
+trigger.addEventListener('click', () => {
+  hobbies.classList.toggle('hidden');
+  trigger.querySelector('i').classList.toggle('fa-chevron-up');
+  trigger.querySelector('i').classList.toggle('fa-chevron-down');
+});
 </script>
 
                             
