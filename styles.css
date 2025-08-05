@@ -118,26 +118,31 @@ section h2 {
 /* PROJECTS */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .project-card {
-  background: white;
+   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.1);
 }
 
 .project-image-container {
+  width: 100%;
   height: 200px;
-  overflow: hidden;
+  object-fit: cover;
 }
 
 .project-image-container img {
@@ -152,34 +157,33 @@ section h2 {
 }
 
 .project-content {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .project-content h3 {
   font-size: 1.3rem;
-  color: var(--secondary);
+  color: #1e3a8a;
   margin-bottom: 10px;
 }
 
 .project-content p {
   font-size: 1rem;
+  color: #4b5563; /* cool gray */
   margin-bottom: 15px;
 }
 
 .project-buttons a {
-  background: var(--primary);
+ padding: 8px 14px;
+  background: #1f2937; /* slate gray */
   color: white;
-  padding: 8px 14px;
-  text-decoration: none;
   border-radius: 6px;
-  margin-right: 10px;
-  display: inline-block;
-  margin-top: 5px;
-  transition: var(--transition);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
 }
 
 .project-buttons a:hover {
-  background: var(--secondary);
+  background: #065f46; /* deep green */
 }
 
 /* ABOUT */
@@ -341,6 +345,31 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.tech-stack {
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.tech-stack img {
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.tech-stack img:hover {
+  opacity: 1;
+}
+
+.status-tag {
+  background: #fcd34d;
+  color: #92400e;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
 
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
