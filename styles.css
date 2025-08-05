@@ -1,4 +1,14 @@
 /* RESET & BASE STYLES */
+:root {
+  --primary: #1e3a8a;       /* Deep blue */
+  --secondary: #065f46;     /* Deep green */
+  --accent: #1e40af;        /* Slightly lighter blue */
+  --background: #f8fafc;     /* Light gray background */
+  --text: #1f2937;          /* Dark gray text */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +16,6 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
-
-
 
 body {
   background: var(--background);
@@ -70,7 +78,7 @@ header {
 }
 
 .resume-btn {
-  background: var(--accent);
+  background: var(--primary);
 }
 .linkedin-link {
   background: var(--secondary);
@@ -109,7 +117,7 @@ section h2 {
 /* PROJECTS */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 1rem;
   max-width: 1100px;
@@ -117,7 +125,7 @@ section h2 {
 }
 
 .project-card {
-   background: #ffffff;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
@@ -153,19 +161,19 @@ section h2 {
 
 .project-content h3 {
   font-size: 1.3rem;
-  color: #1e3a8a;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .project-content p {
   font-size: 1rem;
-  color: #4b5563; /* cool gray */
+  color: #4b5563;
   margin-bottom: 15px;
 }
 
 .project-buttons a {
- padding: 8px 14px;
-  background: #1f2937; /* slate gray */
+  padding: 8px 14px;
+  background: var(--secondary);
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -174,7 +182,7 @@ section h2 {
 }
 
 .project-buttons a:hover {
-  background: #065f46; /* deep green */
+  background: #1a5276;
 }
 
 /* ABOUT */
@@ -211,7 +219,7 @@ section h2 {
 /* HOBBIES */
 #hobbies {
   text-align: center;
-  background: rgba(79, 70, 229, 0.05);
+  background: rgba(30, 58, 138, 0.05);
   padding: 3rem 1rem;
   border-radius: 16px;
 }
@@ -326,17 +334,7 @@ section h2 {
   color: var(--accent);
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* TECH STACK & STATUS */
 .tech-stack {
   margin: 10px 0;
   display: flex;
@@ -353,14 +351,45 @@ section h2 {
 }
 
 .status-tag {
-  background: #fcd34d;
-  color: #92400e;
+  background: #d1fae5;
+  color: #065f46;
   padding: 4px 10px;
   font-size: 0.8rem;
   border-radius: 6px;
   margin-left: 10px;
 }
 
+/* ROADMAP */
+#roadmap ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#roadmap li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hobbies-container {
+    gap: 20px;
+  }
+  
+  .contact-container {
+    gap: 20px;
+  }
+}
 
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
