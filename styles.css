@@ -7,16 +7,7 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --primary: #4f46e5;       /* Indigo */
-  --secondary: #ec4899;     /* Pink */
-  --accent: #10b981;        /* Green */
-  --background: #f9fafb;    /* Light Gray */
-  --card-bg: #ffffff;       /* White */
-  --text: #1e293b;          /* Slate */
-  --shadow: 0 4px 20px rgba(0,0,0,0.1);
-  --transition: all 0.4s ease;
-}
+
 
 body {
   background: var(--background);
