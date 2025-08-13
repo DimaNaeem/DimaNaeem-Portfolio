@@ -1,7 +1,7 @@
 /* RESET & BASE STYLES */
 :root {
   --primary: #1e3a8a;       /* Deep blue */
-  --secondary: #9d6e89;     /* Deep green */
+  --secondary: #052f3b;     /* Deep green */
   --accent: #1e40af;        /* Slightly lighter blue */
   --background: #f8fafc;     /* Light gray background */
   --text: #1f2937;          /* Dark gray text */
@@ -181,7 +181,7 @@ section h2 {
 
 .project-buttons a {
   padding: 8px 14px;
-  background: var(--secondary);
+  background: var(--primary);
   color: white;
   border-radius: 6px;
   text-decoration: none;
